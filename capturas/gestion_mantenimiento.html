@@ -4,11 +4,53 @@
 <title>Gestión de Mantenimiento</title>
 </head>
 <body>
-<h1>Gestión de Mantenimiento</h1>
+<h1>Gestión de Mantenimiento de Equipos</h1>
+
+<h2>Lista de Equipos</h2>
 <ul>
-<li>Prensa - Disponible</li>
-<li>Press Plano - Mantenimiento</li>
-<li>Smith - En uso</li>
+<li>Cinta de correr 1 - Disponible</li>
+<li>Cinta de correr 2 - Mantenimiento</li>
+<li>Pesas libres - Disponible</li>
+<li>Máquina de press de banca - En uso</li>
+<li>Máquina de remo - Disponible</li>
+<li>Bicicleta estática 1 - Disponible</li>
+<li>Bicicleta estática 2 - Mantenimiento</li>
+<li>Máquina de poleas - En uso</li>
+<li>Elíptica - Disponible</li>
+<li>Máquina de abdominales - Disponible</li>
 </ul>
+
+<h2>Actualizar Estado de Equipo</h2>
+<form onsubmit="actualizarEstado(event)">
+<label for="equipo">Equipo:</label>
+<select id="equipo" name="equipo">
+<option value="Cinta de correr 1">Cinta de correr 1</option>
+<option value="Cinta de correr 2">Cinta de correr 2</option>
+<option value="Pesas libres">Pesas libres</option>
+<option value="Máquina de press de banca">Máquina de press de banca</option>
+<option value="Máquina de remo">Máquina de remo</option>
+<option value="Bicicleta estática 1">Bicicleta estática 1</option>
+<option value="Bicicleta estática 2">Bicicleta estática 2</option>
+<option value="Máquina de poleas">Máquina de poleas</option>
+<option value="Elíptica">Elíptica</option>
+<option value="Máquina de abdominales">Máquina de abdominales</option>
+</select><br><br>
+
+<label for="estado">Estado:</label>
+<select id="estado" name="estado">
+<option value="Disponible">Disponible</option>
+<option value="Mantenimiento">Mantenimiento</option>
+<option value="En uso">En uso</option>
+</select><br><br>
+
+<button type="submit">Actualizar Estado</button>
+</form>
+
+<script>
+function actualizarEstado(event) {
+event.preventDefault();
+alert("Estado actualizado");
+}
+</script>
 </body>
 </html>

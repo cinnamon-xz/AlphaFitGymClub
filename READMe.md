@@ -15,7 +15,8 @@ Este proyecto es una simulación de un sistema de gestión de gimnasio. Se han
 
 ### 1. Registro y Gestión de Clientes
 
-* Permite registrar nuevos clientes con información básica como nombre y correo electrónico.
+* Permite registrar nuevos clientes con información básica como nombre, apellido, DNI, teléfono, correo electrónico, dirección y tipo de membresía (Básica, Estándar, Premium).
+* Simula la gestión de clientes existentes.
 
 ### 2. Control de Asistencia mediante Código QR
 
@@ -24,24 +25,28 @@ Este proyecto es una simulación de un sistema de gestión de gimnasio. Se han
 
 ### 3. Administración de Pagos y Vencimientos
 
-* Permite visualizar una lista de pagos y vencimientos de los clientes.
+* Permite filtrar los pagos por cliente y estado (Pagado, Pendiente).
+* Permite visualizar una lista de pagos con información del cliente, monto, vencimiento y estado.
+* Permite registrar un nuevo pago ingresando el nombre del cliente, monto y fecha de vencimiento.
 
 ### 4. Gestión de Mantenimiento de Equipos
 
-* Permite visualizar el estado de los equipos del gimnasio.
+* Permite visualizar el estado de los equipos del gimnasio (Disponible, Mantenimiento, En uso).
+* Permite actualizar el estado de un equipo seleccionado.
 
 ## Instrucciones de Uso
 
 1.  Abre los archivos HTML en tu navegador web para visualizar las interfaces.
 2.  Utiliza los formularios y botones para interactuar con las interfaces.
 3.  Para el control de asistencia QR, ingresa cualquier texto en el campo "Código QR" para generar un código QR simulado.
-4.  Las capturas de pantalla de cada caso de uso se encuentran en la carpeta capturas/img/.
+4.  Las capturas de pantalla de cada caso de uso se encuentran en la carpeta capturas/.
 
 ## Capturas de Pantalla
 
 ### Registro de Clientes
 
-![Registro](capturas/img/registro_1.png)
+![Formulario de registro (campos vacíos)](capturas/img/registro_1.png)
+![Formulario de registro (campos llenos)](capturas/img/registro_2.png)
 
 ### Control de Asistencia QR
 
@@ -50,11 +55,14 @@ Este proyecto es una simulación de un sistema de gestión de gimnasio. Se han
 
 ### Administración de Pagos
 
-![Pagos](capturas/img/pagos_1.png)
+![Formulario de registro de pagos](capturas/img/pago_1.png)
+![Mensaje de pago registrado](capturas/img/pago_2.png)
+![Formulario de registro de pagos lleno](capturas/img/pago_3.png)
 
 ### Mantenimiento de Equipos
 
-![Estado de equipos](capturas/img/mantenimiento_1.png)
+![Lista de equipos](capturas/img/mantenimiento_1.png)
+![Mensaje de estado actualizado](capturas/img/mantenimiento_2.png)
 
 ## Tecnologías Utilizadas
 

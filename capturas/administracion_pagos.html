@@ -5,22 +5,63 @@
 </head>
 <body>
 <h1>Administración de Pagos</h1>
+
+<h2>Filtrar Pagos</h2>
+<form>
+<label for="cliente">Cliente:</label>
+<input type="text" id="cliente" name="cliente">
+
+<label for="estado">Estado:</label>
+<select id="estado" name="estado">
+<option value="">Todos</option>
+<option value="pagado">Pagado</option>
+<option value="pendiente">Pendiente</option>
+</select>
+
+<button type="submit">Filtrar</button>
+</form>
+
+<h2>Lista de Pagos</h2>
 <table>
 <tr>
 <th>Cliente</th>
 <th>Monto</th>
 <th>Vencimiento</th>
+<th>Estado</th>
 </tr>
 <tr>
 <td>Marcos</td>
 <td>$50</td>
 <td>2024-12-31</td>
+<td>Pagado</td>
 </tr>
 <tr>
-<td>Ana</td>
+<td>Frank</td>
 <td>$60</td>
 <td>2025-01-15</td>
+<td>Pendiente</td>
 </tr>
 </table>
+
+<h2>Registrar Nuevo Pago</h2>
+<form onsubmit="registrarPago(event)">
+<label for="cliente_nuevo">Cliente:</label>
+<input type="text" id="cliente_nuevo" name="cliente_nuevo" required><br><br>
+
+<label for="monto_nuevo">Monto:</label>
+<input type="number" id="monto_nuevo" name="monto_nuevo" required><br><br>
+
+<label for="vencimiento_nuevo">Vencimiento:</label>
+<input type="date" id="vencimiento_nuevo" name="vencimiento_nuevo" required><br><br>
+
+<button type="submit">Registrar Pago</button>
+</form>
+
+<script>
+function registrarPago(event) {
+event.preventDefault();
+alert("Pago registrado");
+}
+</script>
 </body>
 </html>

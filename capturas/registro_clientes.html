@@ -5,12 +5,43 @@
 </head>
 <body>
 <h1>Registro de Clientes</h1>
-<form>
+<form onsubmit="mostrarMensaje(event)">
 <label for="nombre">Nombre:</label><br>
-<input type="text" id="nombre" name="nombre"><br><br>
+<input type="text" id="nombre" name="nombre" value=""><br><br>
+
+<label for="apellido">Apellido:</label><br>
+<input type="text" id="apellido" name="apellido" value=""><br><br>
+
+<label for="dni">DNI:</label><br>
+<input type="text" id="dni" name="dni" value=""><br><br>
+
+<label for="telefono">Teléfono:</label><br>
+<input type="tel" id="telefono" name="telefono" value=""><br><br>
+
 <label for="email">Email:</label><br>
-<input type="email" id="email" name="email"><br><br>
+<input type="email" id="email" name="email" value="cliente@ejemplo.com"><br><br>
+
+<label for="direccion">Dirección:</label><br>
+<input type="text" id="direccion" name="direccion" value=""><br><br>
+
+<label for="membresia">Membresía:</label><br>
+<select id="membresia" name="membresia">
+<option value="basica">Básica</option>
+<option value="estandar">Estándar</option>
+<option value="premium">Premium</option>
+</select><br><br>
+
 <button type="submit">Registrar</button>
 </form>
+
+<div id="mensaje" style="display: none;"></div>
+
+<script>
+function mostrarMensaje(event) {
+event.preventDefault(); // Evita que el formulario se envíe realmente
+document.getElementById("mensaje").innerHTML = "Registro exitoso";
+document.getElementById("mensaje").style.display = "block";
+}
+</script>
 </body>
 </html>
